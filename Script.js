@@ -1,5 +1,6 @@
 let userScore = 0;
 let compScore = 0;
+let draw = 0;
 
 const choices = document.querySelectorAll(".choice");
 
@@ -33,6 +34,8 @@ const playGame= (userChoice) => {
         if(userChoice === compChoice){
             msg.innerText = `well it's a draw . Play Again ! `;
             document.querySelector("#msg").style.backgroundColor="#006d77";
+            draw++;
+             document.querySelector("#draw-score").innerText=draw;
             
         }
         else{
